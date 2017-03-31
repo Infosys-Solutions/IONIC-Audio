@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<!-- choose a file from local storage-->
+<ion-label>select an audio from local storage then click on play button</ion-label>
+<button ion-button (click)="fieChooser()">Choice</button>
+<p>{{nativeApp}}</p>
+<!--//play selected video-->
+<button ion-button *ngIf="status" (click)="playAudio()">Play</button>
+
+<hr>
+
+<!--//this is mp3 from assets of app that play through Html Audio Tag-->
+<ion-label>this is already stored in App. </ion-label>
+ <audio src="audio/file.mp3" controls > </audio>
+</ion-content>
